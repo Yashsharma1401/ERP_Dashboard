@@ -1,0 +1,100 @@
+.calander {
+    border: 0.5px solid rgb(226, 232, 240);
+    padding: 6px 10px;
+    border-radius: 3px;
+    font-size: 16px;
+    color: rgb(117, 127, 239);
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.search-btn {
+    color: rgb(117, 127, 239);
+}
+
+.search-bar {
+    padding: 5px 16px;
+}
+
+.profile-pic {
+    width: 32px;
+    height: 32px;
+}
+
+/* Adjust header when sidebar is open */
+.navbar {
+    transition: margin-left 0.3s ease-in-out;
+    width: calc(100% - 0px); /* Default full width */
+}
+
+.navbar.shifted {
+    margin-left: 300px; /* Matches sidebar width */
+    width: calc(100% - 300px); /* Adjust width to prevent overflow */
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-wrap: nowrap;
+        padding: 8px 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%; /* Reset width */
+        margin-left: 0; /* Prevent shifting on smaller screens */
+    }
+
+    .search-bar {
+        max-width: 140px;
+        padding: 3px 10px;
+    }
+
+    .search-bar input {
+        font-size: 12px;
+        max-width: 90px;
+    }
+
+    .search-btn {
+        font-size: 12px;
+        padding: 3px;
+    }
+
+    .calander {
+        font-size: 12px;
+        padding: 5px 7px;
+    }
+
+    .navbar .d-flex.gap-3 {
+        gap: 8px;
+    }
+
+    .navbar img {
+        width: 28px;
+        height: 28px;
+    }
+
+    .navbar svg {
+        font-size: 14px;
+    }
+}
+
+.navbar {
+    transition: margin-left 0.3s ease-in-out;
+    width: calc(100% - 0px);
+}
+
+.navbar.shifted {
+    margin-left: 250px; /* Adjust based on your sidebar width */
+    width: calc(100% - 250px);
+}
+/* Default header styling */
+.navbar {
+    width: 100%;
+    transition: width 0.3s ease-in-out;
+  }
+  
+  /* Shrink header when sidebar is open on desktop */
+  .sidebar-open .navbar {
+    width: calc(100% - 250px);
+  }
+  

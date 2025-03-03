@@ -1,0 +1,86 @@
+.dashboard {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+  
+  /* 🟢 Default header (full width) */
+  .header {
+    width: 100%;
+    transition: margin-left 0.3s ease-in-out, width 0.3s ease-in-out;
+  }
+  
+  /* 🔴 When sidebar is open, move header to the right */
+  .sidebar-open .header {
+    width: calc(100% - 250px);
+    margin-left: 250px;
+  }
+  
+  /* 🟢 Default dashboard container */
+  .dashboard-container {
+    display: flex;
+    flex: 1;
+    transition: margin-left 0.3s ease-in-out;
+  }
+  
+  /* 🟢 Sidebar default width */
+  .sidebar {
+    width: 250px;
+    transition: width 0.3s ease-in-out;
+  }
+  
+  /* 🔴 If sidebar is closed, hide it */
+  .sidebar-closed .sidebar {
+    width: 0;
+    overflow: hidden;
+  }
+  
+  /* 🟢 Default content area (full width) */
+  .dashboard-content {
+    flex: 1;
+    padding: 20px;
+    transition: margin-left 0.3s ease-in-out, width 0.3s ease-in-out;
+  }
+  
+  /* 🔴 If sidebar is open, move content to the right */
+  .sidebar-open .dashboard-content {
+    width: calc(100% - 250px);
+    margin-left: 250px;
+  }
+  
+  /* 🟢 When sidebar is closed, content takes full width */
+  .sidebar-closed .dashboard-content {
+    width: 100%;
+    margin-left: 0;
+  }
+  
+  /* 🟢 Mobile adjustments */
+  @media (max-width: 768px) {
+    .header {
+      width: 100%;
+      margin-left: 0;
+    }
+  
+    .dashboard-container {
+      flex-direction: column;
+    }
+  
+    /* Sidebar overlays the screen */
+    .sidebar {
+      position: absolute;
+      width: 250px;
+      left: -250px;
+      transition: left 0.3s ease-in-out;
+    }
+  
+    .sidebar-open .sidebar {
+      left: 0;
+    }
+  
+    /* Content always remains full width on mobile */
+    .dashboard-content {
+      width: 100%;
+      margin-left: 0;
+    }
+  }
+  

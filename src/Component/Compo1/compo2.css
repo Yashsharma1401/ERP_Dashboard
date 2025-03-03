@@ -1,0 +1,50 @@
+.recent-orders-container {
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .table-title {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+  
+  .product-img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    border-radius: 5px;
+  }
+  
+  .status {
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+  }
+  
+  .status.pending {
+    background: #d4d4ff;
+    color: #4a4aff;
+  }
+  
+  .status.delivered {
+    background: #c8f7c5;
+    color: #27ae60;
+  }
+  
+  .status.out-of-stock {
+    background: #f8c8c8;
+    color: #c0392b;
+  }
+  
+  @media (max-width: 768px) {
+    .product-img {
+      width: 30px;
+      height: 30px;
+    }
+    .table {
+      font-size: 0.9rem;
+    }
+  }
+  
